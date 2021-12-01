@@ -16,6 +16,7 @@
 			>로 이동
 		</p>
 		<p>이미지 태그 보기</p>
+        <p>비디오 태그 보기</p>
 		<img src="" alt="" />
 		<video
 			src="img/cloud.mp4" // 동영상 경로
@@ -25,5 +26,35 @@
             autoplay // 자동재생
 			poster="img/sumnail.png" // 동영상 썸네일 이미지 지정
 		></video>
+        <p>오디오 태그도 비디오 태그와 비슷하지만 poster(썸네일 지정)를 설정할 수 없음</p>
+        <audio src="" controls></audio>
+        <table border="1" width="100">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+        <table border="1" width="100">
+            <tr>
+                <td colspan="2">1,2</td>
+                <td rowspan="3">3,6,9</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2">4,5,7,8</td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
 	</body>
 </html>
