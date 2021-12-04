@@ -12,9 +12,12 @@
 				form 태그의 action 옵션은 백엔드 개발자가 화면을 어디로
 				지정해줄건지 설정하는 값임
 			</p>
+			<!-- 텍스트 입력 -->
 			<input type="text" name="userid" /><br />
+			<!-- 비밀번호 입력 -->
 			<input type="password" name="pwd" id="" /><br />
 
+			<!-- 복수개 선택 -->
 			<label for="soccer">축구</label>
 			<input type="checkbox" name="hobby" id="soccer" />
 			<label for="music">음악</label>
@@ -27,7 +30,34 @@
 			<label for="male">남성</label>
 			<input type="radio" name="gender" id="male" />
 			<br />
+			<label for="edu">최종학력</label>
+			<select name="education" id="edu">
+				<option value="elementary school">초등학교</option>
+				<option value="middle school">중학교</option>
+				<option value="high school">고등학교</option>
+			</select>
+			<br />
+			<!-- html5에서 새롭게 추가된 요소 -->
+			<!-- 색상 지정 -->
+			<input type="color" name="" id="" /> <br />
+			<!-- 날짜 지정 -->
+			<input type="date" name="" id="" /> <br />
+			<!-- 시간 지정 -->
+			<input type="datetime" name="" id="" /> <br />
+			<!-- 이메일 입력 -->
+			<input type="email" name="" id="" /> <br />
+			<!-- 범위 지정 -->
+			<input type="range" name="" id="" /> <br />
+			<textarea
+				name="comments"
+				id="comments"
+				cols="30"
+				rows="10"
+			></textarea>
+			<br />
+			<!-- 전송 취소 버튼 -->
 			<input type="reset" />
+			<!-- 전송 버튼 -->
 			<input type="submit" />
 		</form>
 	</body>
