@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+h1 {
+	color: red;
+}
+
+div > a {
+	border: 1px solid red;
+}
+
+ul li:nth-of-type(odd) {
+	color: red;
+}
