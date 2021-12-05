@@ -23,6 +23,7 @@ a {
 
 .wrap {
 	width: 800px;
+	overflow: hidden;
 	border: 10px solid #000;
 	margin: 100px auto;
 }
@@ -31,10 +32,18 @@ a {
 	width: 400px;
 	height: 400px;
 	background: aqua;
+	float: left;
 }
 
 .wrap .right {
 	width: 400px;
 	height: 400px;
 	background: hotpink;
+	float: right;
+}
+
+.wrap::after {
+	content: "";
+	display: block;
+	clear: both;
 }

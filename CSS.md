@@ -473,5 +473,110 @@ style.css 구성
   }
   ```
 
+- 좌우 배치를 하기 위해 css에서 `.wrap .left`와 `.wrap .right`에 `float` 속성을 다음과 같이 부여한다.
+
+  ```css
+  .wrap .left {
+  	width: 400px;
+  	height: 400px;
+  	background: aqua;
+  	float: left;
+  }
   
+  .wrap .right {
+  	width: 400px;
+  	height: 400px;
+  	background: hotpink;
+  	float: right;
+  }
+  ```
+
+- 문제점
+
+  - 좌우배치는 잘 됐지만, 강제로 띄워서 좌우배치했으므로,
+  - 부모요소가 left, right의 높이를 인지하지 못하므로 감싸지 못한다.
+
+  ![](img/문제점.JPG)
+
+- 해결 방법
+
+  1. 부모 태그의 강제 높이 값 지정
+
+     - 반응형에 대응할 수 없다.
+
+     ```css
+     .wrap {
+     	width: 800px;
+         height: 400px;
+     	border: 10px solid #000;
+     	margin: 100px auto;
+     }
+     ```
+
+  2. 부모 요소에 `overflow: auto;` 지정
+
+     -  특정 브라우저에서 지원 x
+
+     ```css
+     .wrap {
+     	width: 800px;
+     	overflow: auto;
+     	border: 10px solid #000;
+     	margin: 100px auto;
+     }
+     ```
+
+  3. 부모 요소에 `overflow: hidden;` 지정
+
+     - 내부의 자식 콘텐츠가 잘리는 경우가 발생함.
+
+     ```css
+     .wrap {
+     	width: 800px;
+     	overflow: hidden;
+     	border: 10px solid #000;
+     	margin: 100px auto;
+     }
+     ```
+
+  4. 부모 요소에 `float` 요소 지정
+
+     - 가운데에 배치하기가 애매해진다.
+
+  5. 임의의 `div` 태그 설정 & `clear: both;`
+
+     - 불필요한 태그와 css 설정해야함
+
+       ```html
+       <div class="wrap">
+           <div class="left"></div>
+           <div class="right"></div>
+           <div class="bottom"></div>
+       </div>
+       ```
+
+       ```css
+       .wrap .bottom {
+       	width: 800px;
+       	height: 100px;
+       	background: lightgreen;
+       	clear: both;
+       }
+       ```
+
+     - `clear: both;`를 설정하지 않으면, left, right를 제외한 bottom만 부모 요소로 감싸짐
+
+  6. 가상선택자 사용 (권장사항)
+
+     - 5번과 동작은 같으나, 개선된 방식
+
+     ```css
+     .wrap::after { /* 인라인 요소임 */
+     	content: "";
+     	display: block; /* 블록화 시키기  */
+     	clear: both; /* after라는 가상의 부분까지 부모 요소로 감싼다.`
+     }
+     ```
+
+     
 
