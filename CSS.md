@@ -578,5 +578,76 @@ style.css 구성
      }
      ```
 
-     
+### 가상 선택자
+
+- css 태그 뒤 `::before`, `::after` 등을 붙여서 꾸며주기 효과를 나타낼 때 주로 사용
+
+- `content`를 집어넣을 순 있지만, 웹 접근성을 고려하여 넣지 않는다.
+
+  - 시각 장애인이 사용하는 스크린-리더기에서 인식을 할 수 없음
+
+- 마우스를 올렸을 때 색 변경
+
+  ```css
+  div:hover {
+  	background: red;
+  }
+  ```
+
+### position
+
+- `position: relative;` : 현재 레이아웃에 영향을 미치지 않고, 자기 자신만 움직일 수 있도록 설정하는 것
+- `position: absolute;` : **position 값이 있는** 부모 요소를 기준으로, 위치를 지정
+
+- `position: fixed;` : 브라우저 기준으로 좌표 값을 고정
+
+### z-index
+
+- 작성된 순서가 아닌, `z-index`를 통해 먼저 보여주는 기능
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  	<head>
+  		<meta charset="UTF-8" />
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  		<link rel="stylesheet" href="../css/style.css" />
+  		<title>z-index 실습</title>
+  	</head>
+  	<body>
+  		<div class="box1"></div>
+          <div class="box2"></div>
+  	</body>
+  </html>
+  ```
+
+  ```css
+  .box1 {
+  	width: 400px;
+  	height: 400px;
+  	background: aqua;
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	z-index: 2;
+  }
+  
+  .box2 {
+  	width: 400px;
+  	height: 400px;
+  	background: hotpink;
+  	position: absolute;
+  	top: 200px;
+  	left: 200px;
+  	z-index: 1;
+  }
+  
+  ```
+
+  ![z-index_적용전](img/z-index_적용전.jpg)
+
+  ![z-index_적용후](img/z-index_적용후.jpg)
+
+### opacity 투명도 설정
 
