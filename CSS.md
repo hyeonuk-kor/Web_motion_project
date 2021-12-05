@@ -421,6 +421,12 @@ style.css 구성
 
 - 이 때문에 아직도 현업에서 float을 이용하는 곳이 있다.
 
+- 예제
+
+  ![](img/div_좌우배치.JPG)
+
+  코드 보기
+
   ```html
   <!DOCTYPE html>
   <html lang="en">
@@ -467,5 +473,5 @@ style.css 구성
   }
   ```
 
-  ![](img/div_좌우배치.JPG)
+  
 
