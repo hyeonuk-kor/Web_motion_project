@@ -15,22 +15,22 @@ a {
 	text-decoration: none;
 }
 
-.box1 {
-	width: 400px;
-	height: 400px;
-	background: aqua;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	z-index: 2;
+html {
+	font-size: 16px;
 }
 
-.box2 {
-	width: 400px;
-	height: 400px;
-	background: hotpink;
-	position: absolute;
-	top: 200px;
-	left: 200px;
-	z-index: 1;
+div {
+	font-size: 40px;
+}
+
+div h1 {
+	font-size: 3em;
+}
+
+div p {
+	font-size: 1em;
+}
+
+div a {
+	font-size: 0.8em;
 }

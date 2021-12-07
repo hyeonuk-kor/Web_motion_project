@@ -651,3 +651,53 @@ style.css 구성
 
 ### opacity 투명도 설정
 
+- `opacity : value;`로 설정할 수 있다.
+- `value`의 경우 0~1 사이의 값으로 설정한다.
+- 0은 투명, 1은 불투명
+
+### rem, em 글자크기 관련 단위
+
+- `em`보다 `rem`을 많이 사용함
+
+- 전반적으로 값을 키울 때 `rem`을 사용
+
+  ```html
+  html {
+  	font-size: 16px; /* 기본 값*/
+  }
+  ```
+
+  ```css
+  h1 {
+      font-size: 3rem; /* html의 font-size 값의 3배로 지정하는 방법*/
+  }
+  ```
+
+- Client가 전반적으로 글자 크기를 조정하고 싶어할 때, `html`의 `font-size`만 수정하여 반영할 수 있다.
+
+- `em`의 경우 부모의 값에 비율로 조정되는 방식
+
+  ```css
+  html {
+  	font-size: 16px;
+  }
+  
+  div {
+  	font-size: 40px;
+  }
+  
+  div h1 {
+  	font-size: 3em; /* div의 font-size(40px)의 3배*/
+  }
+  
+  div p {
+  	font-size: 1em; /* div의 font-size(40px)의 1배*/
+  }
+  
+  div a {
+  	font-size: 0.8em; /* div의 font-size(40px)의 0.8배*/
+  }
+  ```
+
+  
+
