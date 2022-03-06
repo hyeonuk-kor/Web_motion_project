@@ -418,10 +418,6 @@ style.css 구성
 - float을 이용하여 블록 요소를 좌우로 배치했고,
 
 - 이 때문에 아직도 현업에서 float을 이용하는 곳이 있다.
-
-- 예제
-  
-  ![](img/div_좌우배치.JPG)
   
   코드 보기
   
@@ -493,8 +489,6 @@ style.css 구성
   
   - 좌우배치는 잘 됐지만, 강제로 띄워서 좌우배치했으므로,
   - 부모요소가 left, right의 높이를 인지하지 못하므로 감싸지 못한다.
-  
-  ![](img/문제점.JPG)
 
 - 해결 방법
   
@@ -640,12 +634,8 @@ style.css 구성
       top: 200px;
       left: 200px;
       z-index: 1;
-  }
+  }![z-index_적용전](img/z-index_before.JPG)![z-index_적용후](img/z-index_after.JPG)
   ```
-  
-  ![z-index_적용전](img/z-index_before.JPG)
-  
-  ![z-index_적용후](img/z-index_after.JPG)
 
 ### opacity 투명도 설정
 
